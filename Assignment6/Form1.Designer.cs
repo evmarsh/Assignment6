@@ -49,6 +49,8 @@
             this.tabPageOpr = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccounts)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageAcc.SuspendLayout();
@@ -150,7 +152,7 @@
             this.dataGridViewAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAccounts.Location = new System.Drawing.Point(32, 253);
             this.dataGridViewAccounts.Name = "dataGridViewAccounts";
-            this.dataGridViewAccounts.Size = new System.Drawing.Size(552, 207);
+            this.dataGridViewAccounts.Size = new System.Drawing.Size(350, 207);
             this.dataGridViewAccounts.TabIndex = 10;
             // 
             // txtAccountId
@@ -219,6 +221,8 @@
             // 
             // tabPageOpr
             // 
+            this.tabPageOpr.Controls.Add(this.label2);
+            this.tabPageOpr.Controls.Add(this.textBox2);
             this.tabPageOpr.Controls.Add(this.textBox1);
             this.tabPageOpr.Controls.Add(this.btnDeposit);
             this.tabPageOpr.Controls.Add(this.txtWithdraw);
@@ -251,6 +255,22 @@
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Balance:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "AccountID:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(112, 9);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(154, 20);
+            this.textBox2.TabIndex = 18;
             // 
             // Form1
             // 
@@ -295,6 +315,8 @@
         private System.Windows.Forms.TabPage tabPageOpr;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
