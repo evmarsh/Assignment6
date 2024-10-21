@@ -10,10 +10,11 @@ namespace Assignment6
 {
     internal class Account
     {
-        private string AccountID { get; set; }
-        private string CustomerName { get; set; }
-        private decimal Balance { get; set; }
+        public string AccountID { get; set; }
+        public string CustomerName { get; set; }
+        public decimal Balance { get; set; }
 
+        public Account() { }
         public Account(string accountID, string customerName, decimal balance)
         {
             this.AccountID = accountID;
