@@ -88,17 +88,14 @@ namespace Assignment6
             }
             else
             {
-                bool createAccount = false;
+                bool createAccount = true;
                 foreach (var account in accounts)
                 {
                     if (account.AccountID == txtAccountId.Text)
                     {
                         MessageBox.Show("Account already exists");
+                        createAccount = false;
                         break;
-                    }
-                    else
-                    {
-                        createAccount = true;
                     }
                 }
                 if (createAccount)
