@@ -106,5 +106,62 @@ namespace Assignment6
                 }
             }
         }
+
+        private void btnDeposit_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtAccountID2.Text) || string.IsNullOrEmpty(txtDeposit.Text))
+            {
+                MessageBox.Show("Please fill out all account information.");
+            }
+            else
+            {
+                bool NoAccount = true;
+                foreach (var account in accounts)
+                {
+                    if (account.AccountID == txtAccountID2.Text)
+                    {
+                        decimal depositAmount = decimal.Parse(txtDeposit.Text);
+                        account.Deposit(depositAmount);
+                        dataGridViewAccounts.Refresh();
+                        MessageBox.Show("Your deposit was successful!");
+                        fillData();
+                        NoAccount = false;
+                    }
+                }
+                if (NoAccount)
+                {
+                    MessageBox.Show("Account does not exist.Please check your input");
+                }
+            }
+        }
+
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtAccountID2.Text) || string.IsNullOrEmpty(txtWithdraw.Text))
+            {
+                MessageBox.Show("Please fill out all account information.");
+            }
+            else
+            {
+                bool NoAccount = true;
+                foreach (var account in accounts)
+                {
+                    if (account.AccountID == txtAccountID2.Text)
+                    {
+                        decimal withdrawAmount = decimal.Parse(txtWithdraw.Text);
+                        account.Withdraw(withdrawAmount);
+                        dataGridViewAccounts.Refresh();
+                        MessageBox.Show("Your withdrawal was successful!");
+                        fillData();
+                        NoAccount = false;
+                    }
+                }
+                if (NoAccount)
+                {
+                    MessageBox.Show("Account does not exist.Please check your input");
+                }
+
+            }
+        }
     }
 }
